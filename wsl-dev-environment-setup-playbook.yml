@@ -1,0 +1,6 @@
+- hosts: wsl
+  vars_files:
+    - vars/prerequisite_packages.yml
+  roles:
+    - packages
+  user: eldy
