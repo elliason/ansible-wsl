@@ -2,5 +2,7 @@
   vars_files:
     - vars/prerequisite_packages.yml
   roles:
-    - packages
+    #- packages
+    #- sshkeys
+    - docker
   user: eldy

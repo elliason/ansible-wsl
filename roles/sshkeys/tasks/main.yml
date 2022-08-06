@@ -1,0 +1,28 @@
+- name: Generate ssh key
+  shell: ssh-keygen -t ed25519 -C "info@eliasondrej.com" -f /home/{{ ansible_user }}/.ssh/id_rsa -q -N ''
+  ignore_errors: yes
+
+- name: Set permissions on ssh key
+  file:
+    path: /home/{{ ansible_user }}/.ssh/id_rsa
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0600'
+
+- name: Set permissions on ssh key public
+  file:
+      path: /home/{{ ansible_user }}/.ssh/id_rsa.pub
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: '0644'
+
+- name: Set permissions on ssh key directory
+  file:
+      path: /home/{{ ansible_user }}/.ssh
+      owner: "{{ ansible_user }}"
+      group: "{{ ansible_user }}"
+      mode: '0700'
+
+- name: Add keys to ssh-agent
+  shell: eval "$(ssh-agent -s)" && ssh-add /home/{{ ansible_user }}/.ssh/id_rsa
+  ignore_errors: yes

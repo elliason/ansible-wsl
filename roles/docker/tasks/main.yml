@@ -1,0 +1,16 @@
+- name: Add docker group if not exists
+  become: true
+  group:
+    name: docker
+    state: present
+
+- name: add current user to docker group
+  become: true
+  user:
+      name: "{{ ansible_user }}"
+      state: present
+      groups: docker
+      append: yes
+
+- name: log in to a new group
+  shell: newgrp docker
