@@ -1,8 +1,10 @@
 - hosts: wsl
   vars_files:
     - vars/prerequisite_packages.yml
+    - vars/git-configuration.yml
   roles:
     #- packages
     #- sshkeys
-    - docker
+    #- docker
+    - git
   user: eldy

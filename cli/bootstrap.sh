@@ -15,9 +15,3 @@ apt upgrade -y
 
 echo -e "${red} --- Ansible setup --- ${clear}"
 apt-get install ansible -y
-
-echo -e "${red} --- Git setup --- ${clear}"
-git config --global user.name "Elias Ondrej"
-git config --global user.email "info@eliasondrej.com"
-git config --global core.autocrlf false
-git config --global init.defaultBranch main

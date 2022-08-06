@@ -1,0 +1,40 @@
+- name: Add a setting to ~/.gitconfig
+  git_config:
+    name: user.email
+    scope: global
+    value: "info@eliasondrej.com"
+
+- name: Add a setting to ~/.gitconfig
+  git_config:
+    name: user.name
+    scope: global
+    value: "Elias Ondrej"
+
+- name: Add a setting to ~/.gitconfig
+  git_config:
+    name: core.autocrlf
+    scope: global
+    value: "false"
+
+- name: Add a setting to ~/.gitconfig
+  git_config:
+    name: init.defaultBranch
+    scope: global
+    value: main
+
+- name: Add a setting to ~/.gitconfig
+  git_config:
+    name: core.editor
+    scope: global
+    value: vim
+
+- name: Add a global .gitignore file
+  git_config:
+    name: core.excludesfile
+    scope: global
+    value: /home/{{ ansible_user }}/.gitignore
+
+- name: Setup the users global .gitignore file
+  template:
+    src: "gitignore.j2"
+    dest: /home/{{ ansible_user }}/.gitignore

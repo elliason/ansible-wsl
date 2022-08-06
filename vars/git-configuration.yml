@@ -1,0 +1,7 @@
+ansible_git_config: {
+  # Lines to be included in users global .gitignore file
+  ignores: [
+    ".idea",
+    ".DS_Store"
+  ]
+}
