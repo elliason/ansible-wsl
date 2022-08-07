@@ -1,3 +1,8 @@
 prerequisite_packages:
   - unzip # unzip is required to extract the zip file
   - xclip # for copy to clipboard
+  - libnss3-tools # certutil, mkcert dependency (https://github.com/FiloSottile/mkcert)
+  - make # make is required to build the binary
+
+homebrew_packages:
+  - mkcert # https://github.com/FiloSottile/mkcert

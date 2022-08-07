@@ -2,9 +2,10 @@
   vars_files:
     - vars/prerequisite_packages.yml
     - vars/git-configuration.yml
+    - vars/node.yml
   roles:
-    #- packages
-    #- sshkeys
-    #- docker
+    - packages
+    - sshkeys
+    - docker
     - git
   user: eldy

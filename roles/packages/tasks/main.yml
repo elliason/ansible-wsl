@@ -13,3 +13,33 @@
   become: true
   apt:
     name: "{{ prerequisite_packages }}"
+
+- name: nvm
+  shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v{{ node_config.nvm_version }}/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+
+- name: nvm
+  shell: >
+    source {{ ansible_env.HOME }}/.nvm/nvm.sh &&
+    nvm install {{ node_config.node_version }} &&
+    nvm use {{ node_config.node_version }} &&
+    nvm alias default {{ node_config.node_version }} &&
+    npm install -g npm &&
+    npm install -g yarn
+  args:
+    executable: /bin/bash
+
+- name: npm update and yarn install
+  shell: >
+    source {{ ansible_env.HOME }}/.nvm/nvm.sh &&
+    npm install -g npm &&
+    npm install -g yarn
+  args:
+    executable: /bin/bash
+
+- name: install homebrew packages
+  homebrew:
+    name: "{{ homebrew_packages }}"
+    state: present
