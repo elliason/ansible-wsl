@@ -6,3 +6,4 @@ prerequisite_packages:
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
+  - hub #hub is an extension to command-line git. $hub sync - fast-forward all local branches to match the latest state on the remote. (https://hub.github.com/)
