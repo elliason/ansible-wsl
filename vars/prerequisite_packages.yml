@@ -3,6 +3,8 @@ prerequisite_packages:
   - xclip # for copy to clipboard
   - libnss3-tools # certutil, mkcert dependency (https://github.com/FiloSottile/mkcert)
   - make # make is required to build the binary
+  - build-essential # build-essential is required to build the binary
+  - tree # tree is required to display the directory structure
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
