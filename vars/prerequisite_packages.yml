@@ -5,6 +5,17 @@ prerequisite_packages:
   - make # make is required to build the binary
   - build-essential # build-essential is required to build the binary
   - tree # tree is required to display the directory structure
+  - libgtk2.0-0 # libgtk2.0-0 is required to run Cypress
+  - libgtk-3-0 # libgtk-3-0 is required to run Cypress
+  - libgbm-dev # libgbm-dev is required to run Cypress
+  - libnotify-dev # libnotify-dev is required to run Cypress
+  - libgconf-2-4 # libgconf-2-4 is required to run Cypress
+  - libnss3 # libnss3 is required to run Cypress
+  - libxss1 # libxss1 is required to run Cypress
+  - libasound2 # libasound2 is required to run Cypress
+  - libxtst6 # libxtst6 is required to run Cypress
+  - xauth # xauth is required to run Cypress
+  - xvfb # xvfb is required to run Cypress
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert

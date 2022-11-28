@@ -12,7 +12,7 @@ Bash
 
 ```json
 [boot]
-systemd=true
+  systemd=true
 ```
 
 You will then need to close your WSL distribution using wsl.exe --shutdown from PowerShell to restart your WSL instances. Once your distribution restarts, systemd should be running. You can confirm using the command: systemctl list-unit-files --type=service, which will show the status of your services.
