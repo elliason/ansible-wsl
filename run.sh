@@ -1,0 +1,1 @@
+ansible-playbook wsl-dev-environment-setup-playbook.yml --ask-become-pass
