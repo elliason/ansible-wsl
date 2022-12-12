@@ -16,6 +16,7 @@ prerequisite_packages:
   - libxtst6 # libxtst6 is required to run Cypress
   - xauth # xauth is required to run Cypress
   - xvfb # xvfb is required to run Cypress
+  - net-tools # ifconfig
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
