@@ -17,6 +17,11 @@ prerequisite_packages:
   - xauth # xauth is required to run Cypress
   - xvfb # xvfb is required to run Cypress
   - net-tools # ifconfig
+  - iproute2 # ip
+  - iputils-ping # ping
+  - dnsutils # nslookup
+  - procps
+  - sen
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
