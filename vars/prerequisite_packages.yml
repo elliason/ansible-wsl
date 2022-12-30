@@ -23,6 +23,7 @@ prerequisite_packages:
   - procps
   - sen
   - exa # ls on steroids
+  - bat # cat on steroids
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
