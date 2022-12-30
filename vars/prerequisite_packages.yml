@@ -22,6 +22,7 @@ prerequisite_packages:
   - dnsutils # nslookup
   - procps
   - sen
+  - exa # ls on steroids
 
 homebrew_packages:
   - mkcert # https://github.com/FiloSottile/mkcert
